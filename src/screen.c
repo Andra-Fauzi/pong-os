@@ -83,6 +83,7 @@ void put_char(unsigned char c)
         cursor_x = 0;
         cursor_y++;
     }
+
     /*apapun character yang melebihi dari spasi bisa di print*/
     else if(c >= ' ')
     {
