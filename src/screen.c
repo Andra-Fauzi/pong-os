@@ -63,7 +63,12 @@ void put_char(unsigned char c)
 
     if(c == 0x08)
     {
-        if(cursor_x != 0) cursor_x--;
+        where = textmemptr + (cursor_y * 80 + cursor_x -1);
+        *where = ' ' | att;
+        if(cursor_x != 0)
+        {
+            cursor_x--;
+        }
     }
     else if(c == 0x09)
     {

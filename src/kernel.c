@@ -48,6 +48,10 @@ void _main()
     init_video();
     gdt_install();
     idt_install();
+    isrs_install();
+    __asm__ __volatile__ ("sti");
+    irq_install();
+    keyboard_install();
     put_string("halo kernel\n");
     put_string("halo kernel\n");
     put_string("halo kernel\n");
