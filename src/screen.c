@@ -98,7 +98,6 @@ void put_char(unsigned char c)
     scroll();
     move_cursor();
 }
-
 void put_string(unsigned char *text)
 {
     int i;

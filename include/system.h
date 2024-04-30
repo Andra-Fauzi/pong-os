@@ -51,4 +51,11 @@ extern void timer_wait(int ticks);
 extern void keyboard_install();
 extern void keyboard_handler(struct regs *r);
 
+/* PAGING.C */
+extern void enable_paging();
+
+/* DISK.C */
+extern char *ata_lba_read(unsigned int drive, unsigned int addr);
+extern void ata_lba_write(unsigned int drive, unsigned int addr,char* buffer);
+
 #endif
